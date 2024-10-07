@@ -10,6 +10,7 @@ public class ShipScript : MonoBehaviour
     public float RotationFuelConsumptionRate;
     public float ExhaustVelocity;
     public float ManeuveringSpeed;
+    public Light EngineLight;
     private new Rigidbody rigidbody;
     private float HorizontalSteering;
     private float VerticalSteering;
@@ -32,7 +33,14 @@ public class ShipScript : MonoBehaviour
     private void FixedUpdate()
     {
         if (Thrust)
+        {
             ApplyThrust(Time.fixedDeltaTime);
+            EngineLight.intensity = 2;
+        }
+        else
+        {
+            EngineLight.intensity = 1;
+        }
 
         if (HorizontalSteering != 0f || VerticalSteering != 0f)
             ApplyRotation(Time.fixedDeltaTime);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3090516389615937658}
   - component: {fileID: 734934744345943393}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Engine Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 30514210183884698}
   - component: {fileID: 6338261957637124600}
   m_Layer: 0
-  m_Name: Point Light 2
+  m_Name: Headlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,8 +889,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3090516389615937658}
   - {fileID: 30514210183884698}
+  - {fileID: 3090516389615937658}
   - {fileID: 3297035663856923041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1041,5 +1041,6 @@ MonoBehaviour:
   FuelMass: 0.0001
   ThrustFuelConsumptionRate: 0.0000008333333
   RotationFuelConsumptionRate: 0.0000008333333
-  ExhaustVelocity: 500
+  ExhaustVelocity: 300
   ManeuveringSpeed: 45
+  EngineLight: {fileID: 734934744345943393}
